@@ -1,0 +1,34 @@
+# ~/.bash_colors: should be included in .bash_profile  
+# Text color variables
+txtund=$(tput sgr 0 1)          # Underline
+txtbld=$(tput bold)             # Bold
+
+txtred=$(tput setaf 1)
+txtgre=$(tput setaf 2)
+txtyel=$(tput setaf 3)
+txtblu=$(tput setaf 4)
+txtpur=$(tput setaf 5)
+txtcya=$(tput setaf 6)
+txtwhi=$(tput setaf 7)
+
+bldred=${txtbld}$txtred 
+bldgre=${txtbld}$txtgre 
+bldyel=${txtbld}$txtyel 
+bldblu=${txtbld}$txtblu 
+bldpur=${txtbld}$txtpur 
+bldcya=${txtbld}$txtcya 
+bldwhi=${txtbld}$txtwhi 
+
+txtrst=$(tput sgr0)             # Reset
+
+function infor { 
+	echo ${bldwhi} INFO - $*${txtrst}        
+}
+
+function warn { 
+	echo "${bldyel}WARN - $*${txtrst}"
+}
+
+function err { 
+	echo "${bldred}ERR - $*${txtrst}"
+}

@@ -1,0 +1,27 @@
+# ~/.bash_bashes: should be included in .bash_profile
+
+# Enhanced history search see ~/.inputrc
+shopt -s histappend
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
+
+#cut down the number of key-strokes you enter per day.
+export CDPATH=.:~/devel:~/tmp:/usr/local/share/doc/
+
+# this will correct minor spelling errors in a cd command,
+shopt -s cdspell
+
+# This one allows files beginning with a dot ('.') to be returned in the
+# results of path-name expansion.
+shopt -s dotglob
+
+# This will give you ksh-88 egrep-style extended pattern matching or, in
+# other words, turbo-charged pattern matching within bash.
+shopt -s extglob
+
+# Hangs when exit ssh
+shopt -s huponexit
+
+# Autocompletion for sudo
+complete -cf sudo        
+
+

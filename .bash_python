@@ -1,0 +1,7 @@
+# ~/.bash_python: should be included in .bash_profile 
+
+
+export PYTHONPATH=/usr/lib/python2.5:/usr/lib/python2.5/plat-linux2:/usr/lib/python2.5/lib-tk:/usr/lib/python2.5/lib-dynload:/usr/local/lib/python2.5/site-packages:/usr/lib/python2.5/site-packages:/usr/lib/python2.5/site-packages/Numeric:/var/lib/python-support/python2.5:/var/lib/python-support/python2.5/gtk-2.0
+
+
+export PYTHONPATH=/usr/lib/pyshared/python2.6:$PYTHONPATH

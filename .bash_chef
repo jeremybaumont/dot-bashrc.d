@@ -1,0 +1,2 @@
+# ~/.bash_chef: should be included in .bash_profile 
+export PATH="/opt/chef/embedded/bin:$PATH"

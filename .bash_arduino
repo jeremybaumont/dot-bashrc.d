@@ -1,0 +1,6 @@
+# ~/.bash_arduino: should be included in .bash_profile 
+
+
+# For arduino
+export LD_LIBRARY_PATH=/usr/lib/jni:${LD_LIBRARY_PATH}
+

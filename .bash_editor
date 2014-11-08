@@ -1,0 +1,11 @@
+# ~/.bash_editor: should be included in .bash_profile 
+
+### EDITOR
+export PAGER=less
+export EDITOR=vim
+export VISUAL=$EDITOR
+export SVN_EDITOR=$EDITOR
+export GIT_EDITOR=$EDITOR
+export HISTSIZE=5000
+export CSCOPE_EDITOR=$EDITOR
+

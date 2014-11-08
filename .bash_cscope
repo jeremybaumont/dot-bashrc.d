@@ -1,0 +1,6 @@
+# ~/.bash_profile: executed by bash(1) for login shells.
+
+# cscope database see http://jeremy.baumont.org/wiki/index.php/Cscope
+export CSCOPE_DB=${HOME}/devel/cscope/cscope.out
+
+

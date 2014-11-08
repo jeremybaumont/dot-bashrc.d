@@ -1,0 +1,40 @@
+function __prompt_command()
+{
+    # capture the exit status of the last command
+    EXIT="$?"
+    PS1=""
+ 
+    if [ $EXIT -eq 0 ]; then PS1+="\[$txtgre\][\t]\[$txtrst\] "; else PS1+="\[$txtred\][\t]\[$txtrst\] "; fi
+ 
+ 
+    # basic information (user@host:path)
+    PS1+="\[$bldblu\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$bldpur\]\w\[$txtrst\] "
+ 
+    # check if inside git repo
+    local git_status="`git status -unormal 2>&1`"    
+    if ! [[ "$git_status" =~ Not\ a\ git\ repo ]]; then
+        # parse the porcelain output of git status
+        if [[ "$git_status" =~ nothing\ to\ commit ]]; then
+            local Color_On=$txtgre
+        elif [[ "$git_status" =~ nothing\ added\ to\ commit\ but\ untracked\ files\ present ]]; then
+            local Color_On=$txtpur
+        else
+            local Color_On=$txtred
+        fi
+ 
+        if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
+            branch=${BASH_REMATCH[1]}
+        else
+            # Detached HEAD. (branch=HEAD is a faster alternative.)
+            branch="(`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`)"
+        fi
+ 
+        # add the result to prompt
+        PS1+="\[$Color_On\][$branch]\[$txtrst\] "
+    fi
+ 
+    history -a; history -n
+    # prompt $ or # for root
+    PS1+="\$\n>"
+}
+export PROMPT_COMMAND=__prompt_command
