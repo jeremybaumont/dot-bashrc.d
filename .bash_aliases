@@ -15,6 +15,9 @@ fi
 
 ## Use a long listing format ##
 alias ll='ls -la' 
+
+## Colorized ls
+alias ls='ls -g'
  
 ## Show hidden files ##
 alias l.='ls -d .*' 
