@@ -82,9 +82,9 @@ alias headerc='curl -I --compress'
 alias rm='rm -I --preserve-root'
  
 # Parenting changing perms on / #
-alias chown='chown --preserve-root'
-alias chmod='chmod --preserve-root'
-alias chgrp='chgrp --preserve-root'
+#alias chown='chown --preserve-root'
+#alias chmod='chmod --preserve-root'
+#alias chgrp='chgrp --preserve-root'
 
  
 ## pass options to free ## 

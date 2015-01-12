@@ -1,0 +1,2 @@
+export GIT_SSL_NO_VERIFY=true
+export PATH=/usr/local/git/bin:$PATH
