@@ -2,7 +2,7 @@ export ORACLE_BASE=$HOME/Applications/Oracle
 export ORACLE_HOME=$ORACLE_BASE/clients/current
 export TNS_ADMIN=$ORACLE_BASE/tnsnames
 export SQLPATH=$HOME/Devel/oracle_sql_scripts
-export PATH=$ORACLE_HOME/bin:$PATH
-export DYLD_LIBRARY_PATH=$ORACLE_HOME/lib:$DYLD_LIBRARY_PATH
+export PATH=$ORACLE_HOME:$PATH
+export DYLD_LIBRARY_PATH=$ORACLE_HOME:$DYLD_LIBRARY_PATH
 
 
