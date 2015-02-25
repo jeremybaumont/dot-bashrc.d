@@ -7,3 +7,7 @@ if [ -d ~/.rbenv/bin ]; then
         export PATH="$HOME/.rbenv/bin:$PATH"
         eval "$(rbenv init -)"
 fi
+
+if [ -d ~/.bashrc.d ]; then
+        source ~/.bashrc.d/.bash_chef
+fi
