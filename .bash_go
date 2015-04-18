@@ -1,7 +1,8 @@
 #export GOROOT=/opt/google/go
-export GOPATH=/home/jeremyb/gocode
+#export GOPATH=$HOME/gocode
 #export GOARCH=386
 #export GOOS=linux
 #export GOBIN=$GOPATH/bin
 #export PATH=$PATH:$GOBIN:$GOROOT/bin
-export PATH=/home/jeremyb/gocode/bin:/usr/local/go/bin:$PATH
+#export PATH=$HOME/gocode/bin:/usr/local/go/bin:$PATH
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
