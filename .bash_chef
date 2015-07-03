@@ -1,2 +1,6 @@
 # ~/.bash_chef: should be included after rbenv env config 
 export PATH="/opt/chefdk/bin:$PATH"
+export CHEF_USER="jbaumont"
+export CHEF_SERVER_URL=""
+export CHEF_VALIDATION_CLIENT_NAME=""
+export CHEF_VALIDATION_KEY=""
