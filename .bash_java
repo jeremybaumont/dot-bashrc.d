@@ -1,1 +1,1 @@
-echo 'eval "$(jenv init -)"'
+echo 'eval "$(jenv init -)"' &>/dev/null
