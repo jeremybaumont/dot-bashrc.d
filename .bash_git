@@ -1,2 +1,7 @@
 export GIT_SSL_NO_VERIFY=true
 export PATH=/usr/local/git/bin:$PATH
+
+# enable git completion contrib script see http://code-worrier.com/blog/autocomplete-git/ for details
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
