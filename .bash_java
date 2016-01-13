@@ -1,2 +1,2 @@
-export JENV_ROOT=/opt/boxen/homebrew/bin/jenv
+export JENV_ROOT=$HOME/.jenv
 echo 'eval "$(jenv init -)"' &>/dev/null
