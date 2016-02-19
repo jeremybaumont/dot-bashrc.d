@@ -4,5 +4,5 @@
 #export GOOS=linux
 #export GOBIN=$GOPATH/bin
 #export PATH=$PATH:$GOBIN:$GOROOT/bin
-#export PATH=$HOME/gocode/bin:/usr/local/go/bin:$PATH
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+export PATH=$HOME/src/go/bin:$PATH
+#[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
