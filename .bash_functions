@@ -76,3 +76,8 @@ d2h(){
 }
 
 
+# substract date in hours
+datediffhours() {     d1=$(date -j -f "%y%m%d %H:%M" "$1"  "+%s");     d2=$(date -j -f "%y%m%d %H:%M" "$2"  "+%s");     echo $(( (d1 - d2) / 3600 )) hours; }
+
+# substract date in days 
+datediffdays() {     d1=$(date -j -f "%y%m%d %H:%M" "$1"  "+%s");     d2=$(date -j -f "%y%m%d %H:%M" "$2"  "+%s");     echo $(( (d1 - d2) / 86400 )) days; }
