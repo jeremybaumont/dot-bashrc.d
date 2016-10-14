@@ -81,3 +81,10 @@ datediffhours() {     d1=$(date -j -f "%y%m%d %H:%M" "$1"  "+%s");     d2=$(date
 
 # substract date in days 
 datediffdays() {     d1=$(date -j -f "%y%m%d %H:%M" "$1"  "+%s");     d2=$(date -j -f "%y%m%d %H:%M" "$2"  "+%s");     echo $(( (d1 - d2) / 86400 )) days; }
+
+# Rename tmux windows name
+nw () {
+    local new_window_name=$1
+
+    printf "\033k${new_window_name}\033\\"
+}
