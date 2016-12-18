@@ -4,5 +4,5 @@ export PYTHONPATH=.:$PYTHONPATH
 
 # required by virtualenvwrapper
 export PATH=/Users/jbaumont/Library/Python/2.7/bin:$PATH
-export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/bin/python
-source /opt/boxen/homebrew/bin/virtualenvwrapper.sh
+#export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/bin/python
+source $(which virtualenvwrapper.sh)
