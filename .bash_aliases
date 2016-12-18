@@ -208,3 +208,6 @@ alias mdb="middleman build --clean"
 
 # go
 alias cgp="cd $GOPATH/src"
+
+# ansible to rule my workstation
+alias playa="cd ~/Code/workstation-ansible && ansible-playbook -K -i inventory/localhost setup_macos_workstations.yml  --vault-password-file ~/.vault_pass.txt"
