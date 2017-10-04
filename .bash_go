@@ -3,6 +3,7 @@
 #export GOARCH=386
 #export GOOS=linux
 #export PATH=$PATH:$GOBIN:$GOROOT/bin
+export GOROOT=/opt/boxen/homebrew/Cellar/go/1.9/libexec
 export GOPATH=$HOME/Code/go
 export GOBIN=$GOPATH/bin
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH

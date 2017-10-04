@@ -1,8 +1,12 @@
 # ~/.bash_python: should be included in .bash_profile 
 
 export PYTHONPATH=.:$PYTHONPATH
-
 # required by virtualenvwrapper
-export PATH=/Users/jbaumont/Library/Python/2.7/bin:$PATH
-export VIRTUALENVWRAPPER_PYTHON=/opt/boxen/homebrew/bin/python
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export WORKON_HOME=$HOME/.virtualenvs
 source /opt/boxen/homebrew/bin/virtualenvwrapper.sh
+export PROJECT_HOME=~/Code
+eval "$(pyenv init -)"
+export PATH=$HOME/.pyenv/shims:$PATH
+#pyenv virtualenvwrapper_lazy
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1

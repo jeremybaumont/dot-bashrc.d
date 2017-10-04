@@ -9,8 +9,6 @@ alias c='clear'
 # alias reboot and and package update
 if [ $UID -ne 0 ]; then
     alias reboot='sudo reboot'
-    alias update='sudo aptitude update'
-    alias upgrade='sudo aptitude safe-upgrade'
 fi
 
 ## Use a long listing format ##
@@ -113,7 +111,7 @@ alias reboottomato="ssh admin@192.168.0.1 /sbin/reboot"
 
 
 # alias source
-alias b='source ~/.bash_profile'
+alias b='.  ~/.bash_profile'
 
 # alias for hellanzb
 alias he='hellanzb enqueue'

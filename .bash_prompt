@@ -4,11 +4,11 @@ function __prompt_command()
     EXIT="$?"
     PS1=""
  
-    if [ $EXIT -eq 0 ]; then PS1+="\[$txtgre\][\t]\[$txtrst\] "; else PS1+="\[$txtred\][\t]\[$txtrst\] "; fi
+    if [ $EXIT -eq 0 ]; then PS1+="\t:"; else PS1+="\[$txtred\]\t\[$txtrst\] "; fi
  
  
     # basic information (user@host:path)
-    PS1+="\[$bldblu\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$bldpur\]\w\[$txtrst\] "
+    PS1+="\[$bldblu\]\u\[$txtrst\]:\[$bldpur\]\w\[$txtrst\]"
  
     # check if inside git repo
     local git_status="`git status -unormal 2>&1`"    
@@ -30,11 +30,10 @@ function __prompt_command()
         fi
  
         # add the result to prompt
-        PS1+="\[$Color_On\][$branch]\[$txtrst\] "
+        PS1+="\[$Color_On\]:$branch\[$txtrst\] "
     fi
  
     history -a; history -n
-    # prompt $ or # for root
-    PS1+="\$\n>"
+    PS1+="\n> "
 }
 export PROMPT_COMMAND=__prompt_command

@@ -1,4 +1,4 @@
-export NVM_DIR=~/.nvm
-export BREW=`which brew`
-. $($BREW --prefix nvm)/nvm.sh
-
+export NVM_DIR=$HOME/.nvm
+cd ${NVM_DIR}
+. ./nvm.sh
+cd
